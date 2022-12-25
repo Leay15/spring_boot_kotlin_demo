@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+
+  postgres:
+    image: 'postgres:15.1-alpine3.17'
+    environment:
+      POSTGRES_PASSWORD: Password123*
+      POSTGRES_USER: test
+      POSTGRES_DB: test
+    ports:
+      - "5432:5432"
+    volumes:
+      - database-data:/var/lib/postgresql/data/
+
+  api:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    command: ["java","-jar","/src/app.jar"]
+
+volumes:
+  database-data:
