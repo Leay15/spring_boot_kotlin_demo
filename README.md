@@ -15,7 +15,10 @@ You can see the server running on
 This example tries to follow the CLEAN principles architecture but
 adapted to Spring MVC way.
 
-WIP: Consume External API as gateway
+The project consumes PokeAPI for testing purposes using async process
+and Completable Future API
+
+WIP: Change to coroutines scope
 
 # IntelliJIDEA Users
 
