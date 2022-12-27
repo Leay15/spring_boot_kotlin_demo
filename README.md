@@ -4,9 +4,28 @@ You can run this project with Docker.
 
 Just be sure of have installed Docker Compose.
 
-The project needs to be able to run the application locally before running in docker.
+Execute
+> docker-compose up -d api
 
-WIP: Allow project autopackage itself
+And it should run the PostgresSQL and API container
+
+You can see the server running on
+> http://localhost:8080
+
+This example tries to follow the CLEAN principles architecture but
+adapted to Spring MVC way.
+
+WIP: Consume External API as gateway
+
+# IntelliJIDEA Users
+
+You can run this project by setting up your IntelliJIDEA IDE Gradle to
+Java 17
+
+Also by running
+> docker-compose up -d postgres
+
+It will setting up the database for testing proposes.
 
 ### Reference Documentation
 
